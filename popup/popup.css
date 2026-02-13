@@ -1,0 +1,17 @@
+.container {
+    margin-left: 5px;
+    margin-right: 100px;
+}
+
+.main>input[type="checkbox"] {
+    width: 20px;
+    height: 20px; 
+}
+
+.main>span {
+    font-size: 24px; 
+}
+
+fieldset {
+  opacity: 1;
+}

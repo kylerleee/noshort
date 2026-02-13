@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoShort</title>
+    <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">NoShort</h1>
+    </div>
+    
+    <label class="main">
+        <input type="checkbox" id="EnableExtension">
+        <span>Hide Shorts!</span>
+    </label>
+    <br>
+    <br>
+    <form id="settings">
+        <fieldset>
+            <legend>
+                Youtube
+            </legend>
+
+            <label>
+                <input type="checkbox" id="HideUtubeShorts">
+                <span>
+                    Hide shorts
+                </span>
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="HideUtubeShortsTab">
+                <span>
+                    Hide shorts tab
+                </span>
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" id="RedirectUtubeShorts">
+                <span>
+                    Redirect shorts
+                </span>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                Instagram
+            </legend>
+
+            <label>
+                <input type="checkbox">
+                <span>
+                    Hide reels
+                </span>
+            </label>
+            <br>
+            <label>
+                <input type="checkbox">
+                <span>
+                    Hide reels tab
+                </span>
+            </label>
+            <br>
+            <label>
+                <input type="checkbox">
+                <span>
+                    Redirect reels
+                </span>
+            </label>
+        </fieldset>
+        <button type="submit">Save Settings</button>
+    </form>
+    
+    
+    <script src="popup.js"></script>
+</body>
+</html>

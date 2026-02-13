@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "NoShort",
+  "version": "1.0",
+
+  "description": "Removes short form content from your favourite websites.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.instagram.com/*"
+      ],
+      "js": [
+        "noshort.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.instagram.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "noshort@finalproject.local"
+    }
+  },
+  "action": {
+    "default_icon": "icons/border-48.png",
+    "default_title": "NoShort",
+    "default_popup": "popup/popup.html"
+  }
+}
