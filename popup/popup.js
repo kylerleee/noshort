@@ -12,8 +12,9 @@ const saveSettings = async () => {
         HideUtubeShorts: document.getElementById('HideUtubeShorts').checked,
         HideUtubeShortsTab: document.getElementById('HideUtubeShortsTab').checked,
         RedirectUtubeShorts: document.getElementById('RedirectUtubeShorts').checked,
-        EnableExtension: document.getElementById('EnableExtension').checked
-    }
+        EnableExtension: document.getElementById('EnableExtension').checked,
+        RedirectReels: document.getElementById('RedirectReels').checked
+    };
     await browser.storage.local.set({ userSettings: settings });
     console.log("Settings saved!");
 }
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('HideUtubeShortsTab').checked = !!s.HideUtubeShortsTab;
         document.getElementById('RedirectUtubeShorts').checked = !!s.RedirectUtubeShorts;
         document.getElementById('EnableExtension').checked = !!s.EnableExtension;
+        document.getElementById('RedirectReels').checked = !!s.RedirectReels;
     }
 
     updateInputStates();
