@@ -4,6 +4,9 @@ const updateInputStates = () => {
     document.getElementById('HideUtubeShorts').disabled = !isEnabled;
     document.getElementById('HideUtubeShortsTab').disabled = !isEnabled;
     document.getElementById('RedirectUtubeShorts').disabled = !isEnabled;
+    document.getElementById('HideIGShorts').disabled = !isEnabled;
+    document.getElementById('HideIGShortsTab').disabled = !isEnabled;
+    document.getElementById('RedirectIGShorts').disabled = !isEnabled;
 };
 
 const saveSettings = async () => {
@@ -13,7 +16,10 @@ const saveSettings = async () => {
         HideUtubeShortsTab: document.getElementById('HideUtubeShortsTab').checked,
         RedirectUtubeShorts: document.getElementById('RedirectUtubeShorts').checked,
         EnableExtension: document.getElementById('EnableExtension').checked,
-        RedirectReels: document.getElementById('RedirectReels').checked
+        HideIGShorts: document.getElementById('HideIGShorts').checked,
+        HideIGShortsTab: document.getElementById('HideIGShortsTab').checked,
+        RedirectIGShorts: document.getElementById('RedirectIGShorts').checked
+
     };
     await browser.storage.local.set({ userSettings: settings });
     console.log("Settings saved!");
@@ -30,7 +36,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('HideUtubeShortsTab').checked = !!s.HideUtubeShortsTab;
         document.getElementById('RedirectUtubeShorts').checked = !!s.RedirectUtubeShorts;
         document.getElementById('EnableExtension').checked = !!s.EnableExtension;
-        document.getElementById('RedirectReels').checked = !!s.RedirectReels;
+        document.getElementById('HideIGShorts').checked = !!s.HideIGShorts;
+        document.getElementById('HideIGShortsTab').checked = !!s.HideIGShortsTab;
+        document.getElementById('RedirectIGShorts').checked = !!s.RedirectIGShorts;
     }
 
     updateInputStates();

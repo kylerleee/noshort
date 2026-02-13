@@ -11,7 +11,7 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     if (changeInfo.url && changeInfo.url.includes("/reels")) {
         browser.storage.local.get("userSettings").then(result => {
-            if (result.userSettings && result.userSettings.RedirectReels && result.userSettings.EnableExtension) {
+            if (result.userSettings && result.userSettings.RedirectIGShorts && result.userSettings.EnableExtension) {
                 browser.tabs.update(tabId, { url: 'https://www.instagram.com/' });
             }
         });
